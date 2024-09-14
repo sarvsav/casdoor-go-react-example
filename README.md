@@ -48,7 +48,7 @@ export const sdkConfig = {
 Modify `app.yaml`: https://github.com/casdoor/casdoor-go-react-example/blob/master/app.yaml
 
 ```yaml
-# certificate:get in your Casdoor server -> application
+# certificate:get in your Casdoor server -> identity -> Certs -> application cert
 certificate: |
   -----BEGIN CERTIFICATE-----
   MIIE+TCCAuGgAwIBAgIDAeJAMA0GCSqGSIb3DQEBCwUAMDYxHTAbBgNVBAoTFENh
@@ -80,12 +80,12 @@ certificate: |
   8XKXmzlxuHbTMQYtZPDgspS5aK+S4Q9wb8RRAYo=
   -----END CERTIFICATE-----
 server:
-  endpoint: "https://door.casdoor.com"
-  client_id: "294b09fbc17f95daf2fe"
-  client_secret: "dd8982f7046ccba1bbd7851d5c1ece4e52bf039d"
-  organization: "casbin"
-  application: "app-vue-python-example"
-  frontend_url: "http://localhost:3000"
+  endpoint: "https://door.casdoor.com" # Casdoor server endpoint
+  client_id: "294b09fbc17f95daf2fe" # Application client id
+  client_secret: "dd8982f7046ccba1bbd7851d5c1ece4e52bf039d" # Application client secret
+  organization: "casbin" # Name of the organization that the application belongs to
+  application: "app-vue-python-example" # Name of the application
+  frontend_url: "http://localhost:3000" # Frontend URL
 ```
 
 - Install frontend dependencies
